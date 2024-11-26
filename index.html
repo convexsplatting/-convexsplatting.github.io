@@ -161,17 +161,23 @@
     </div>
         <div class="container align-items-center">
             <div class="row text-center justify-content-center mx-auto">
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                     <a href="https://arxiv.org/abs/2411.14974" target="_blank" class="link-block w-inline-block">
                         <img src="assets/media/arxiv_paper.png" alt="paper" class="img-fluid" style="height:60px" /></a>
                     <br>
                     <div class="text-block-2"><strong class="bold-text-nerf_v2">Arxiv</strong></div>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                     <a href="https://github.com/convexsplatting/convex-splatting" target="_blank" class="link-block w-inline-block">
                         <img src="assets/media/github.png" alt="github" class="img-fluid" style="height:60px" /></a>
                     <br>
                     <div class="text-block-2"><strong class="bold-text-nerf_v2">Code</strong></div>
+                </div>
+                <div class="col-sm-3">
+                    <a href="https://www.youtube.com/watch?v=5N3OFHH7lbU" target="_blank" class="link-block w-inline-block">
+                        <img src="assets/media/video_logo.png" alt="Youtube" class="img-fluid" style="height:60px" /></a>
+                    <br>
+                    <div class="text-block-2"><strong class="bold-text-nerf_v2">Video</strong></div>
                 </div>
             </div>
         </div>
@@ -347,8 +353,6 @@
                 </div>
             </div>
 
-
-
         </div>
 
             
@@ -357,6 +361,22 @@
             3D Convex Splatting achieves high-quality novel view synthesis and fast rendering by representing scenes with 3D smooth convexes.
             In contrast, the softness of Gaussian primitives often results in blurring and loss of detail, while 3D Convex Splatting effectively captures sharp edges and fine details.
         </p>
+
+        <hr class="divider" />
+        <div class="container" style="max-width: col-sm-12;">
+            <h2 style="font-weight: bold;">Video</h2>
+            <div class="row justify-content-center">
+                <iframe 
+                    width="672" 
+                    height="378" 
+                    src="https://www.youtube.com/embed/5N3OFHH7lbU?si=NZrrLINoYp82AcsJ" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
 
         
         <hr class="divider" />
@@ -371,6 +391,25 @@
                 </div>
             </div>
         </div>
+
+        
+        <hr class="divider" />
+        <div class="container" style="max-width: col-sm-12;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 style="font-weight: bold;">Convex Splatting Pipeline</h2>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <img src="assets/pipeline.png" style="max-width: 100%;"/>
+                        </div>
+                    </div>
+                    <p style="text-align: justify;">
+                        The 3D smooth convex is represented with a point set that is projected in the 2D camera plane. We extract the line-delimited convex hull of the projected points and define the signed distance function for each line. The lines are combined to define an indicator function for each pixel based on smoothness <strong>&#948;</strong> and sharpness <strong>&#963;</strong> of the 3D convex. The pipeline is differentiable end-to-end, which allows the parameters of the smooth convex primitives to be optimized based on the rendered images.
+                    </p>
+                </div>
+            </div>
+        </div>
+
         
         
         <hr class="divider" />
@@ -402,7 +441,7 @@
             </div>
 
             <p style="text-align: justify;">
-                Smooth convexes can represent a wide variety of shapes, whether hard or soft, dense or diffuse. 
+                Smooth convexes can represent a wide variety of shapes, whether hard or soft, dense or diffuse, by varying the smoothness parameter <strong>&#948;</strong> and the sharpness parameter <strong>&#963;</strong>.
                 They effectively approximate diverse geometries, including both polyhedra and Gaussians, while requiring fewer primitives for accurate representation. 
                 The red lines describe the convex hull, whereas the black dots represent the point set. 
             </p>
